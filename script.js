@@ -6,7 +6,7 @@
  * If the sending service is unreachable, visitors get a one-click "email instead" link,
  * so a message is never lost.
  */
-const WEB3FORMS_KEY = '';
+const WEB3FORMS_KEY = 'b5a4221e-5e9e-4efe-bfce-9c48a76395c4';
 const CONTACT_EMAIL = 'akhilchenna@gmail.com';
 
 (() => {
