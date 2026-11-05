@@ -1,10 +1,13 @@
 /* Contact form delivery.
- * Messages are sent by FormSubmit (free, no account) to the address below.
- * The FIRST message triggers an activation email from FormSubmit — click its link once
- * and every later message arrives in your inbox. FormSubmit then gives you a random
- * alias you can paste here instead of your email address, if you'd rather hide it.
+ * Primary: Web3Forms (free, 250 messages/month). Get a key by entering your email at
+ * https://web3forms.com — the key arrives by email in seconds. Paste it below.
+ * The key is safe to publish: it can only send messages to your inbox.
+ * Until a key is set, the form falls back to FormSubmit.
+ * If the sending service is unreachable, visitors get a one-click "email instead" link,
+ * so a message is never lost.
  */
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/akhilchenna@gmail.com';
+const WEB3FORMS_KEY = '';
+const CONTACT_EMAIL = 'akhilchenna@gmail.com';
 
 (() => {
   const root = document.documentElement;
@@ -254,31 +257,49 @@ const FORM_ENDPOINT = 'https://formsubmit.co/ajax/akhilchenna@gmail.com';
     }
     if (form._honey.value) return; // bot
 
-    const data = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      message: form.message.value.trim(),
-      _subject: `Portfolio message from ${form.name.value.trim()}`,
-      _replyto: form.email.value.trim(),
-      _template: 'table',
-    };
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+    const subject = `Portfolio message from ${name}`;
+
+    const request = WEB3FORMS_KEY
+      ? {
+          url: 'https://api.web3forms.com/submit',
+          body: { access_key: WEB3FORMS_KEY, subject, from_name: 'Portfolio contact form', name, email, message },
+        }
+      : {
+          url: `https://formsubmit.co/ajax/${CONTACT_EMAIL}`,
+          body: { name, email, message, _subject: subject, _replyto: email, _template: 'table' },
+        };
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
     setStatus('');
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 15000);
     try {
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch(request.url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(request.body),
+        signal: controller.signal,
       });
       const json = await res.json().catch(() => ({}));
-      if (!res.ok || String(json.success) === 'false') throw new Error(json.message || 'Request failed');
+      if (!res.ok || String(json.success) === 'false') throw new Error(json.message || `HTTP ${res.status}`);
       form.reset();
       setStatus('Message sent. Thanks — I’ll reply to your email soon.', 'ok');
     } catch (err) {
-      setStatus('Your message didn’t send. Check your connection and try again, or email akhilchenna@gmail.com directly.', 'err');
+      // Offer a pre-filled email so the visitor's message isn't lost
+      const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`${message}\n\n— ${name} (${email})`)}`;
+      statusEl.className = 'form-status err';
+      statusEl.textContent = 'The message service didn’t respond, so your message wasn’t sent. ';
+      const a = document.createElement('a');
+      a.href = mailto;
+      a.textContent = 'Send it by email instead';
+      statusEl.appendChild(a);
+      statusEl.appendChild(document.createTextNode(' — your text is already filled in.'));
     } finally {
+      clearTimeout(timer);
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send message';
     }

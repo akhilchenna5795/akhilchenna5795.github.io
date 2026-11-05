@@ -393,3 +393,4 @@ h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 650; line-height: 1
   .about-text .w { opacity: 1; }
   .project { position: relative; top: auto; }
 }
+.form-status a { color: inherit; font-weight: 600; text-underline-offset: 3px; }
