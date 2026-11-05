@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Akhil Chenna</title>
+  <meta name="description" content="Akhil Chenna — MSc Electrical Power Engineering student at TU Delft, former data analyst at HSBC.">
+  <meta property="og:title" content="Akhil Chenna">
+  <meta property="og:description" content="Electrical power engineering at TU Delft. Previously data analyst at HSBC.">
+  <meta name="theme-color" content="#F4F5F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232D5BD0'/%3E%3Cpath d='M4 16c3-9 5-9 8 0s5 9 8 0 5-9 8 0' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <script>
+    // Apply saved/system theme before paint to avoid a flash
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="nav" id="top-nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Akhil Chenna, back to top">
+        <svg viewBox="0 0 32 20" aria-hidden="true"><path d="M2 10c3-9 5-9 7 0s4 9 7 0 4-9 7 0 4 9 7 0"/></svg>
+        <span>Akhil Chenna</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="icon-btn" href="https://www.linkedin.com/in/akhil-chenna-20a21b1b0/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-inner wrap">
+        <h1 class="hero-name">
+          <span class="line"><span>Akhil</span></span>
+          <span class="line"><span>Chenna</span></span>
+        </h1>
+        <p class="hero-lede">Electrical power engineering student at TU Delft. Previously a data analyst at HSBC, building tools in Python, VBA and Power&nbsp;BI.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/akhil-chenna-20a21b1b0/" target="_blank" rel="noopener">View LinkedIn</a>
+        </div>
+      </div>
+      <svg class="waves" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+        <line class="axis" x1="0" y1="150" x2="1200" y2="150"/>
+        <path class="ph ph-r"/>
+        <path class="ph ph-y"/>
+        <path class="ph ph-b"/>
+      </svg>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to About me"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-sticky">
+        <div class="wrap">
+          <h2 class="about-title" id="about-title">About me</h2>
+          <p class="about-text" data-words>I'm an electrical engineer studying power engineering at TU Delft. Before that, I spent two years at HSBC as a data analyst, building Python, VBA and Power BI tools that turned hours of manual work into minutes. I'm happiest where power hardware meets data: converters that know their battery's state of charge, and models trained on real measurements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts wrap" aria-label="Quick facts">
+      <dl class="facts-grid">
+        <div class="reveal"><dt>Based in</dt><dd>Delft, Netherlands</dd></div>
+        <div class="reveal"><dt>Studying</dt><dd>MSc Electrical Engineering, TU Delft</dd></div>
+        <div class="reveal"><dt>Previously</dt><dd>Manager – Data Analyst, HSBC</dd></div>
+        <div class="reveal"><dt>Focus</dt><dd>Power electronics, energy systems and data</dd></div>
+      </dl>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="edu-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="edu-title">Education</h2>
+          <p>From olympiad school in Visakhapatnam to power engineering in Delft.</p>
+        </header>
+        <ol class="edu">
+          <li class="edu-row reveal">
+            <p class="edu-years">2025 – now</p>
+            <div>
+              <h3>Delft University of Technology</h3>
+              <p>MSc Electrical Engineering, Electrical Power Engineering track</p>
+            </div>
+            <p class="edu-meta">Delft, Netherlands</p>
+          </li>
+          <li class="edu-row reveal">
+            <p class="edu-years">2019 – 2023</p>
+            <div>
+              <h3>National Institute of Technology Tiruchirappalli</h3>
+              <p>BTech (Honours) Electrical and Electronics Engineering, minor in Computer Science</p>
+              <p class="grade">CGPA 8.77 / 10</p>
+            </div>
+            <p class="edu-meta">Tiruchirappalli, India</p>
+          </li>
+          <li class="edu-row reveal">
+            <p class="edu-years">2016 – 2018</p>
+            <div>
+              <h3>FIITJEE Junior College</h3>
+              <p>Intermediate, Class XI and XII</p>
+              <p class="grade">96.1%</p>
+            </div>
+            <p class="edu-meta">Visakhapatnam, India</p>
+          </li>
+          <li class="edu-row reveal">
+            <p class="edu-years">2015 – 2016</p>
+            <div>
+              <h3>Narayana Olympiad School</h3>
+              <p>Class X</p>
+              <p class="grade">CGPA 10.0 / 10</p>
+            </div>
+            <p class="edu-meta">Visakhapatnam, India</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="exp-title">Experience</h2>
+          <p>Two years in banking analytics, and hands-on training inside a refinery and a steel plant.</p>
+        </header>
+        <ol class="timeline">
+          <li class="t-group"><h3>Work</h3></li>
+          <li class="t-item reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <p class="t-when">Aug 2023 – Aug 2025</p>
+            <h4 class="t-role">Manager – Data Analyst</h4>
+            <p class="t-org">The Hongkong and Shanghai Banking Corporation (HSBC) <span>Gurugram, India</span></p>
+            <ul class="t-points">
+              <li>Engineered a dynamic control dashboard in Excel with Python and VBA automation, cutting the daily update to just 2 minutes, then moved it to Power BI for better scale and visualisation.</li>
+              <li>Helped build a data consolidation tool in Python and VBA that pulls together 40+ separate sources, reducing manual data entry by 60%.</li>
+              <li>Recognised by the Senior Vice President for data analytics contributions and featured on HSBC's “At our Best” recognition portal.</li>
+            </ul>
+          </li>
+
+          <li class="t-group"><h3>Internships</h3></li>
+          <li class="t-item reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <p class="t-when">Dec 2021 – Feb 2022</p>
+            <h4 class="t-role">Project Trainee, Electrical Maintenance</h4>
+            <p class="t-org">Hindustan Petroleum Corporation Limited <span>Visakhapatnam, India</span></p>
+            <p class="t-project">Detailed study of transformers and electrical machines of a refinery</p>
+            <ul class="t-points">
+              <li>Worked hands-on with refinery electrical systems: switchgear, relays, captive power plants, motors, transformers and substations.</li>
+              <li>Wrote a detailed report analysing how electrical equipment is applied across the refinery.</li>
+            </ul>
+          </li>
+          <li class="t-item reveal">
+            <span class="t-dot" aria-hidden="true"></span>
+            <p class="t-when">Dec 2020 – Jan 2021</p>
+            <h4 class="t-role">Project Trainee, Central Maintenance Electrical</h4>
+            <p class="t-org">Visakhapatnam Steel Plant <span>Visakhapatnam, India</span></p>
+            <p class="t-project">Maintenance aspects of different types of motors in rolling mills</p>
+            <ul class="t-points">
+              <li>Assisted in maintaining rolling-mill motors, learning their working principles and internal construction.</li>
+              <li>Studied steel plant operations end to end, from blast furnaces and smelting to rolling mills, conveyors and overhead traction cranes, and documented their electrical systems in a report.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="proj-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="proj-title">Projects</h2>
+          <p>Machine learning applied to power electronics and agriculture.</p>
+        </header>
+        <div class="stack">
+          <article class="project" style="--i:0">
+            <div class="project-body">
+              <p class="project-when">Jan – May 2023</p>
+              <h3>State of charge prediction</h3>
+              <p class="project-lede">A 1&nbsp;kW DC-DC power converter for electric vehicle charging that estimates its battery's state of charge in real time.</p>
+              <ul class="t-points">
+                <li>Designed a high-efficiency converter with built-in state of charge models using linear regression and artificial neural networks.</li>
+                <li>Integrated the estimation into the hardware, using the converter's own voltage and current output to track battery health and performance.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>Power electronics</li><li>Neural networks</li><li>Linear regression</li><li>Hardware</li>
+              </ul>
+            </div>
+            <div class="project-visual">
+              <div class="battery" aria-hidden="true"><span class="battery-fill"></span></div>
+              <dl class="stats">
+                <div><dt>Prediction accuracy</dt><dd><span class="count" data-to="96.9" data-decimals="1">0</span>%</dd></div>
+                <div><dt>Converter rating</dt><dd><span class="count" data-to="1">0</span>&nbsp;kW</dd></div>
+                <div><dt>Model loss</dt><dd>0.0006</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project" style="--i:1">
+            <div class="project-body">
+              <p class="project-when">Feb – Mar 2023</p>
+              <h3>Crop prediction with machine learning</h3>
+              <p class="project-lede">A decision support tool that recommends the best crop to grow, with a simple interface for farmers and advisors.</p>
+              <ul class="t-points">
+                <li>Built the models with artificial neural networks and k-nearest neighbours, reaching over 95% accuracy in optimal crop selection.</li>
+                <li>Wrapped them in a Streamlit app so non-technical stakeholders could try it directly.</li>
+                <li>Placed in the top 20 of 2,100 teams at the Tri-NIT Hackathon, run by NIT Trichy, Warangal and Surathkal.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python</li><li>Neural networks</li><li>KNN</li><li>Streamlit</li>
+              </ul>
+            </div>
+            <div class="project-visual">
+              <div class="rank" aria-hidden="true">
+                <span class="rank-bar"><span class="rank-fill"></span></span>
+              </div>
+              <dl class="stats">
+                <div><dt>Selection accuracy</dt><dd><span class="count" data-to="95">0</span>%+</dd></div>
+                <div><dt>Hackathon finish</dt><dd>Top <span class="count" data-to="20">0</span></dd></div>
+                <div><dt>Teams competing</dt><dd><span class="count" data-to="2100">0</span></dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt skills" id="skills" aria-labelledby="skills-title">
+      <div class="ribbon" aria-hidden="true">
+        <div class="ribbon-track" data-dir="-1">Python ~ MATLAB ~ Simulink ~ PLECS ~ LTspice ~ PSpice ~ Power BI ~ SQL ~ PyTorch ~ TensorFlow ~ OpenCV ~ Python ~ MATLAB ~ Simulink ~ PLECS ~ LTspice ~</div>
+        <div class="ribbon-track alt" data-dir="1">Arduino ~ VBA ~ C/C++ ~ Git ~ Linux ~ Jupyter ~ Pandas ~ NumPy ~ Keras ~ scikit-learn ~ QlikSense ~ Arduino ~ VBA ~ C/C++ ~ Git ~ Linux ~</div>
+      </div>
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="skills-title">Technical skills</h2>
+          <p>The tools I reach for, from circuit simulation to dashboards.</p>
+        </header>
+        <div class="skill-groups">
+          <div class="skill-row reveal">
+            <h3>Engineering and simulation</h3>
+            <ul class="tags tags-lg"><li>MATLAB</li><li>Simulink</li><li class="new">PLECS</li><li>LTspice</li><li>PSpice</li><li>Arduino</li></ul>
+          </div>
+          <div class="skill-row reveal">
+            <h3>Programming languages</h3>
+            <ul class="tags tags-lg"><li>Python</li><li>SQL</li><li>VBA</li><li>C/C++</li><li>JavaScript</li><li>HTML/CSS</li></ul>
+          </div>
+          <div class="skill-row reveal">
+            <h3>Machine learning and data</h3>
+            <ul class="tags tags-lg"><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>TensorFlow</li><li>PyTorch</li><li>scikit-learn</li><li>Keras</li><li>OpenCV</li></ul>
+          </div>
+          <div class="skill-row reveal">
+            <h3>Business intelligence</h3>
+            <ul class="tags tags-lg"><li>Power BI</li><li>QlikSense</li><li>Excel</li></ul>
+          </div>
+          <div class="skill-row reveal">
+            <h3>Developer tools</h3>
+            <ul class="tags tags-lg"><li>Git/GitHub</li><li>Linux</li><li>VS Code</li><li>Jupyter Notebook</li><li>Google Colab</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="section" id="leadership" aria-labelledby="lead-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="lead-title">Leadership and volunteering</h2>
+          <p>Two student organisations at NIT Trichy, one founded from scratch.</p>
+        </header>
+        <div class="lead-grid">
+          <article class="lead reveal">
+            <p class="lead-role">President</p>
+            <h3>AIESEC, NIT Trichy chapter</h3>
+            <p class="lead-sub">The world's largest youth-run organisation</p>
+            <dl class="stats stats-row">
+              <div><dt>Team members</dt><dd><span class="count" data-to="30">0</span></dd></div>
+              <div><dt>Volunteers sent</dt><dd><span class="count" data-to="50">0</span>+</dd></div>
+              <div><dt>Countries</dt><dd><span class="count" data-to="12">0</span></dd></div>
+            </dl>
+            <ul class="t-points">
+              <li>Led a team of 30 organising cross-cultural and technical exchanges across AIESEC's network of 126 countries.</li>
+              <li>Sent 50+ volunteers to 12 countries in 18 months, making the chapter India's fastest-growing expansion among 26+ entities since 2016.</li>
+            </ul>
+          </article>
+          <article class="lead reveal">
+            <p class="lead-role">Co-founder and President</p>
+            <h3>SURGE NITT</h3>
+            <p class="lead-sub">Sociology and Civics Club of NIT Trichy</p>
+            <dl class="stats stats-row">
+              <div><dt>Team members</dt><dd><span class="count" data-to="20">0</span></dd></div>
+              <div><dt>Students placed</dt><dd><span class="count" data-to="60">0</span>+</dd></div>
+              <div><dt>UN SDGs</dt><dd><span class="count" data-to="17">0</span></dd></div>
+            </dl>
+            <ul class="t-points">
+              <li>Co-founded the club and led 20 members promoting the UN's 17 Sustainable Development Goals through student events and social media.</li>
+              <li>Partnered with NGOs to open volunteering and technical internship roles, helping 60+ students secure them and supporting them throughout.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <h2 id="contact-title">Get in touch</h2>
+          <p>Questions about my work, an opportunity, or just want to say hello? Send a message and it goes straight to my inbox.</p>
+          <ul class="contact-links">
+            <li><a href="mailto:akhilchenna@gmail.com">akhilchenna@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/akhil-chenna-20a21b1b0/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200">
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="6" required maxlength="5000"></textarea>
+          </div>
+          <!-- Honeypot: real people never fill this in -->
+          <div class="hp" aria-hidden="true">
+            <label for="cf-company">Company</label>
+            <input id="cf-company" name="_honey" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Akhil Chenna</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
